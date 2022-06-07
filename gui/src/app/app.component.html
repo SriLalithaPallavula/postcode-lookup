@@ -2,13 +2,15 @@
   <div class="searchComponentWrapper">
     <app-search (emitSuburbResults)="setSuburbResults($event)"> </app-search>
   </div>
-  <div class="searchResultsWrapper">
+  <div class="searchResultsWrapper" [style.visibility]="suburbsList.length == 0? 'hidden' : ''">
     <div class="suburbsFromSearchResults">
+      <span class="resultsTitle">Suburbs with matching postcode</span>
       <app-suburbs-list [suburbs]="suburbsList" (emitOnSelectSuburb)="handleOnSuburbSelect($event)"
         [viewType]="'SEARCH_RESULTS'">
       </app-suburbs-list>
     </div>
-    <div class="suburbsInSelectedSuburbRange">
+    <div class="suburbsInSelectedSuburbRange" [style.visibility]="suburbsListInRange.length == 0? 'hidden' : ''">
+      <span class="resultsTitle">Suburbs within 4km of the selected suburb</span>
       <app-suburbs-list [suburbs]="suburbsListInRange" [viewType]="'FILTERED_RESULTS'"> </app-suburbs-list>
     </div>
   </div>
