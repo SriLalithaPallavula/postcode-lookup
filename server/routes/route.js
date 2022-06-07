@@ -2,6 +2,9 @@
     const express = require('express');
     const router = express.Router();
 
+    /**
+     * Handles the routing for the request to search suburbs matching a postcode
+     */
     router.get('/suburbs/:code' , (request,response)=>{        
         api.getAllSuburbsByPostcode(request.params).then(
             result =>{
@@ -15,6 +18,9 @@
             )});       
     });
 
+    /**
+     * Handles the routing for the request to search suburbs in a specific distance from the given suburb
+     */
     router.get('/suburbs/:latitude/:longitude/:distance' , (request,response)=>{
         api.getAllSuburbsInRange(request.params).then(
             result => {
