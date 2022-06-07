@@ -1,4 +1,23 @@
 .appWrapper {
   display: flex;
   flex-direction: column;
+  padding: 20px 40px;
+  max-width: 1024px;
+  margin: 20px auto;
+  font-family: sans-serif;
+
+  .searchResultsWrapper {
+    display: flex;
+    gap: 10px;
+
+    .suburbsFromSearchResults {
+      flex: 0.45;
+    }
+
+    .suburbsInSelectedSuburbRange {
+      flex: 0.55;
+    }
+  }
 }
+
+

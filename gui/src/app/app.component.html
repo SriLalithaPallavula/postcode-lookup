@@ -1,13 +1,15 @@
 <div class="appWrapper">
   <div class="searchComponentWrapper">
-    <app-search> </app-search>
+    <app-search (emitSuburbResults)="setSuburbResults($event)"> </app-search>
   </div>
   <div class="searchResultsWrapper">
     <div class="suburbsFromSearchResults">
-      <app-suburbs-list> </app-suburbs-list>
+      <app-suburbs-list [suburbs]="suburbsList" (emitOnSelectSuburb)="handleOnSuburbSelect($event)"
+        [viewType]="'SEARCH_RESULTS'">
+      </app-suburbs-list>
     </div>
     <div class="suburbsInSelectedSuburbRange">
-      <app-suburbs-list> </app-suburbs-list>
+      <app-suburbs-list [suburbs]="suburbsListInRange" [viewType]="'FILTERED_RESULTS'"> </app-suburbs-list>
     </div>
   </div>
 </div>
