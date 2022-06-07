@@ -34,10 +34,18 @@ export class SearchPostcodeService {
     return this.http.get<any>(`${SERVER_URL}/${latitude}/${longitude}/${distance}`);
   }
 
+  /**
+   * retrieves the suburb selected by user
+   * @returns the selected suburb
+   */
   getSelectedSuburb() {
     return this.selectedSuburb;
   }
 
+  /**
+   * Stores the suburb selected by user
+   * @param suburb
+   */
   setSelectedSuburb(suburb: Suburb) {
     this.selectedSuburb = suburb;
   }
