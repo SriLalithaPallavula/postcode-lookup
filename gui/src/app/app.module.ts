@@ -6,21 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './views/search/search.component';
 import { SuburbsListComponent } from './views/suburbs-list/suburbs-list.component';
-import { SuburbItemComponent } from './views/suburb-item/suburb-item.component';;
+import { SuburbItemComponent } from './views/suburb-item/suburb-item.component';
+import { MaterialExampleModule } from './../material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     SuburbsListComponent,
-    SuburbItemComponent
+    SuburbItemComponent,
   ],
   imports: [
-    BrowserModule,
+
+  BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
