@@ -14,10 +14,21 @@ export class SearchPostcodeService {
 
   constructor(private http: HttpClient) {}
 
+  /**
+   * Makes an API request to backend server to get all suburbs matching a postcode
+   * @returns an observer which gives the list of suburbs
+   * @param postcode postcode
+   */
   getAllSuburbsByPostcode(postcode: string): Observable<any> {
     return this.http.get<any>(`${SERVER_URL}/${postcode}`)
   }
 
+  /**
+   * Makes an API request to backend server to get all suburbs within a specific distance from the given suburb
+   * @returns an observer which gives the list of suburbs
+   * @param suburb suburb
+   * @param distance distance from the suburb
+   */
   getAllSuburbsInRange(suburb: Suburb, distance: number): Observable<any> {
     const {latitude, longitude } = suburb;
     return this.http.get<any>(`${SERVER_URL}/${latitude}/${longitude}/${distance}`);
