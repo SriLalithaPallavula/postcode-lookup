@@ -16,7 +16,7 @@
     });
 
     router.get('/suburbs/:latitude/:longitude/:distance' , (request,response)=>{
-        api.getAllSuburbsByPostcode(request.params).then(
+        api.getAllSuburbsInRange(request.params).then(
             result => {
                 response.status(201).send(result)
                 return response;
