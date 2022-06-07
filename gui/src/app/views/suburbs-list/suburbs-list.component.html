@@ -1,1 +1,9 @@
-<div class="suburbsList"> data </div>
+<mat-card class="list-group-item" *ngFor="let suburb of suburbsPaginated; let i = index" [attr.viewType]="viewType"
+  (click)="onSuburbSelect(suburb)" [class.active]="isLinkActive(suburb)" href="javascript:;" [class.disabled]="false"
+  [attr.title]="viewType == 'SEARCH_RESULTS' ?  'Click to view all suburbs within 4km': ''">
+  <app-suburb-item [suburb]="suburb"></app-suburb-item>
+</mat-card>
+
+<div class="paginationContainer" [style.visibility]="suburbs.length == 0? 'hidden' : ''">
+  <mat-paginator [length]="length" [pageSize]="10"> </mat-paginator>
+</div>

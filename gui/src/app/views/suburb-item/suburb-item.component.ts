@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Suburb } from 'src/app/models/suburb.model';
 
 @Component({
   selector: 'app-suburb-item',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuburbItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() suburb!: Suburb;
 
-  ngOnInit(): void {
+  constructor() {
+  }
+
+  ngOnInit() {
   }
 
 }

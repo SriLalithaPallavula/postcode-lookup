@@ -1,0 +1,20 @@
+@import '../../colors.less';
+
+.mat-card{
+  margin: 0.2em 0;
+  background-color: @result-card-bg-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @result-card-hover-color;
+  }
+}
+
+.mat-card.active {
+  background-color: @result-card-bg-color-active;
+  color: white;
+}
+
+.paginationContainer {
+  font-size: 14px;
+}
