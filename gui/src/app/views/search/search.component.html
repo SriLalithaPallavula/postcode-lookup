@@ -1,8 +1,9 @@
 <div class="searchComponent">
+  <h1>Search Postcode</h1>
   <form class="searchForm" name="form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
     <div class="searchInputWrapper">
-      <input id="postcode" class="searchInput" aria-label="Search" maxlength="4" placeholder="Enter Postcode here.."
-        formControlName="postcode" name="postcode" />
+      <input id="postcode" class="searchInput" aria-label="Search" maxlength="4"
+        placeholder="Enter Postcode here. (Eg: 5076, 5086 etc.,)" formControlName="postcode" name="postcode" />
       <div class="searchButtonContainer">
         <button class="searchButton" type="submit" name="search" class="searchButton">
           Search
