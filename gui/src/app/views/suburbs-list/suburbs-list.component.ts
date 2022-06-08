@@ -51,7 +51,7 @@ export class SuburbsListComponent implements OnInit, AfterViewInit {
     }
   }
 
-  isLinkActive(suburb : Suburb){
+  isSuburbSelected(suburb : Suburb){
     if(this.selectedSuburb){
       return suburb.name === this.selectedSuburb.name;
     }
