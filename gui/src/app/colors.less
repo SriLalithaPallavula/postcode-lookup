@@ -1,33 +1,38 @@
 //color palette
-@darkred: #dc1928;
+@color-maximum-red: #dc1928;
+@color-white: #fff;
+@color-lighter-gray_1: #F0F0F0;
+@color-lighter-gray_2: #d7d2cb;
+@color-gray: gray;
+@color-dark-gray: darkgray;
+@color-cadmium-purple: #bc111e;
 
 //Theme
-@primary-color: @darkred;
+@primary-color: @color-maximum-red;
 
 //component specific colors
 
 //search input
-@search-input-border-color: darkgray;
-@search-input-border-top-color: #e1deda;
-@search-input-background-color: #fff;
-@search-input-focus-background-color: #fff;
-@search-input-focus-border-color: #d7d2cb;
-@search-input-focus-outline-color: gray;
+@search-input-border-color: @color-dark-gray;
+@search-input-background-color: @color-white;
+@search-input-focus-background-color: @color-white;
+@search-input-focus-border-color: @color-lighter-gray_2;
+@search-input-focus-outline-color: @color-gray;
 
 //search button
-@search-btn-border-color: #dc1928;
-@search-btn-color: #fff;
-@search-btn-hover-color: #bc111e;
+@search-btn-border-color: @primary-color;
+@search-btn-color: @color-white;
+@search-btn-hover-color: @color-cadmium-purple;
 
 //error message
 @error-message-color: @primary-color;
 
 //suburbs list
-@result-card-active-color: #fff;
-@result-card-bg-color: #fff;
+@result-card-active-color: @color-white;
+@result-card-bg-color: @color-white;
 @result-card-bg-color-active: @primary-color;
-@result-card-hover-color: #F0F0F0;
+@result-card-hover-color: @color-lighter-gray_1;
 
 //app component
-@suburb-selected-border-left-color: gray;
+@suburb-selected-border-left-color: @color-gray;
 
