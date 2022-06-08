@@ -1,3 +1,5 @@
+@import './colors.less';
+
 .appWrapper {
   display: flex;
   flex-direction: column;
@@ -20,7 +22,7 @@
 
     .suburbsInSelectedSuburbRange {
       flex: 0.55;
-      border-left: solid 1px lightgray;
+      border-left: solid 1px @suburb-selected-border-left-color;
       padding-left: 10px;
       display: flex;
       flex-direction: column;
@@ -34,4 +36,15 @@
   }
 }
 
-
+.appBackgroundImage{
+  background-image: url(https://images.unsplash.com/photo-1603298108410-e6f28ad2708d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1933&q=80);
+  top: 0;
+  bottom: calc(100% - 900px);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  opacity: 0.3;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
