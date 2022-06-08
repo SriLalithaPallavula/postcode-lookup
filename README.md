@@ -1,6 +1,7 @@
 # postcode-lookup
 
-Angular app to search post codes
+This an Angular app, which uses postcodeapi (https://postcodeapi.com.au/) to help users to search suburbs based on postcodes.
+Users can select(click) a suburb from the list of results and view all the suburbs with in a specific distance from the selected suburb.
 
 # set up instructions
 
